@@ -1,0 +1,243 @@
+.landing {
+    text-align: center;
+    position: relative;
+    background-color: black;
+    font-family: 'Quatro' !important;
+}
+.section-1 {
+    background-image: url('../static/homebg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover ;
+    min-height: 100vh;
+}
+.header {
+    padding: 20px 7vw;    
+    font-size: .75rem;
+    background-color: rgba(0, 0, 0, .5);
+}
+.logo {
+    width: 12vw;
+    flex: 1;
+}
+.header .nav {
+    flex: 6;
+    width: 100%;
+}
+.nav-wrapper {
+    padding: 5px;
+    position: relative;
+    left: 6vw;
+    width: calc(100% - 6vw);
+}
+.header-link {
+    margin-left: 5vw;
+}
+.header-link img {
+    width: 1.4vw;
+}
+.header-link:first-child {
+    margin-left: 0px;
+}
+.header-link:nth-child(2) {
+    color: grey !important;
+}
+.header-link:nth-child(3) {
+    position: absolute;
+    right: 3vw;
+}
+.header-link:nth-child(4) {
+    position: absolute;
+    right: 0px;
+}
+.think-text1,
+.think-text2 {
+    font-weight: 350;
+    font-size: 2.8em;
+}
+.think-text1 {
+    margin-top: 100px;
+}
+.think-text2 {
+    position: relative;
+    top: -10px;
+    background: linear-gradient(to right, #EC1EB1, #EC1EB1, #5E01BA, #5E01BA);    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+p {
+    font-size: .75rem;
+    padding: 0;
+    margin: 0;
+}
+.first-p,
+.third-p {
+    position: relative;
+    top: 18px;
+}
+.cyberstick-wrapper {
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 160px;
+    height: 220px;
+}
+.cyberstick {
+    height: 300px;
+    position: relative;
+    top: -110px;
+}
+.section-2 {
+    background-color: black;
+    height: fit-content;
+    padding-top: 65px;
+}
+.unlock {
+    font-weight: 350;
+}
+.unlock span {
+    background: linear-gradient(to right, #EC1EB1, #EC1EB1, #5E01BA);    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.unlock:nth-child(2) {
+    position: relative;    
+    top: -10px;
+}
+.buynowbtn {
+    position: relative;    
+    top: 60px;
+    height: 50px;
+    width: 220px;
+    border-radius: 7px;
+    font-size: .75rem;
+    background: linear-gradient(to right, #EC1EB1, #EC1EB1, #5E01BA, #5E01BA);
+    -webkit-text-fill-color: white;
+}
+.tvbg1 {
+    width: 410px;
+    margin-top: 103px;
+    z-index: 5;
+}
+.section-3 {
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+    top: -100px;
+    color: black;
+    padding-top: 270px;
+}
+.make {
+    font-weight: 400;
+}
+.section-3 h1 {
+    color: black;
+}
+.section-3 p,
+.section-4 p {
+    margin: 2.5px;
+}
+.fourth-p {
+    margin-top: 10px !important;
+}
+.buynowbtn2 {
+    top: 30px;
+    border-color: white;
+}
+.tvbg2 {
+    margin-top: 70px;    
+}
+.section-4 {
+    background-color: black;
+    min-height: 100vh;
+    height: fit-content;
+    position: relative;
+    top: -100px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+}
+.ready {
+    font-weight: 400;
+}
+.ready:nth-child(2) {
+    background: linear-gradient(to right, #EC1EB1 40%, #5E01BA);    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;   
+    position: relative;
+    top: -10px;
+}
+.section-4 p {
+    position: relative;
+    top: -14px;
+    margin-left: 0;
+}
+.steparrow1,
+.steparrow2 {
+    width: 60vw;
+}
+.steparrow1 {
+    position: relative;
+    left: -20px;
+}
+.steparrow2 {
+    position: relative;
+    left: 20px;
+}
+.section-4 section {
+    margin-top: 30px;
+}
+.step {
+    width: 12vw;
+}
+.stepwrapper {
+    position: relative;
+    margin-top: -54px;
+}
+.stepwrapper div {
+    margin: 24px;
+}
+.stepwrapper img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.stepwrapper span {
+    font-size: .75rem;
+}
+.stepnumber {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.2rem !important;
+    color: rgba(225, 225, 225, .3);
+}
+.footer {
+    margin-top: 150px;
+    font-size: .75rem;
+    text-align: left;
+    width: 100%;
+}
+.footercontainer {
+    width: 100%;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+.footercontainer a {
+    margin: 2px 0;
+}
+.copyrights {
+    position: relative;
+    top: 50px;
+}
+.copy {
+    width: 12px;
+}
+.social {
+    position: relative;
+    left: 9%;
+}
+.social a {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.fb img, .ig img, .tw img{
+    width: 16px;
+}
