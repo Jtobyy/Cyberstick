@@ -1,3 +1,8 @@
+p {
+    font-size: .75rem;
+    padding: 0;
+    margin: 0;
+}
 .landing {
     text-align: center;
     position: relative;
@@ -9,7 +14,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover ;
-    min-height: 100vh;
+    height: fit-content;
 }
 .header {
     padding: 20px 7vw;    
@@ -17,7 +22,7 @@
     background-color: rgba(0, 0, 0, .5);
 }
 .logo {
-    width: 12vw;
+    width: 30vw;
     flex: 1;
 }
 .header .nav {
@@ -32,31 +37,41 @@
 }
 .header-link {
     margin-left: 5vw;
+    cursor: pointer;
 }
 .header-link img {
-    width: 1.4vw;
+    width: .8rem;
+    transition: all .3s;
+}
+.header-link img:hover { 
+    width: .9rem;
+}
+.header-link {
+    color: grey;
+    transition: all .3s;
+}
+.header-link:hover { 
+    color: white;
 }
 .header-link:first-child {
     margin-left: 0px;
 }
-.header-link:nth-child(2) {
-    color: grey !important;
-}
 .header-link:nth-child(3) {
     position: absolute;
-    right: 3vw;
+    right: 25px;
 }
 .header-link:nth-child(4) {
     position: absolute;
     right: 0px;
 }
+.section-1-text {
+    margin-top: 50px;
+    width: calc(100vw - 20%);
+}
 .think-text1,
 .think-text2 {
     font-weight: 350;
-    font-size: 2.8em;
-}
-.think-text1 {
-    margin-top: 100px;
+    font-size: 2rem;
 }
 .think-text2 {
     position: relative;
@@ -65,23 +80,18 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-p {
-    font-size: .75rem;
-    padding: 0;
-    margin: 0;
-}
-.first-p,
+.first-p
 .third-p {
     position: relative;
-    top: 18px;
+    top: 10px;
 }
 .cyberstick-wrapper {
     background-color: rgba(0, 0, 0, .5);
     margin-top: 160px;
-    height: 220px;
+    height: 140px;
 }
 .cyberstick {
-    height: 300px;
+    height: 230px;
     position: relative;
     top: -110px;
 }
@@ -92,6 +102,7 @@ p {
 }
 .unlock {
     font-weight: 350;
+    font-size: 2rem;
 }
 .unlock span {
     background: linear-gradient(to right, #EC1EB1, #EC1EB1, #5E01BA);    
@@ -104,7 +115,7 @@ p {
 }
 .buynowbtn {
     position: relative;    
-    top: 60px;
+    top: 40px;
     height: 50px;
     width: 220px;
     border-radius: 7px;
@@ -113,20 +124,23 @@ p {
     -webkit-text-fill-color: white;
 }
 .tvbg1 {
-    width: 410px;
-    margin-top: 103px;
+    height: 160px;
+    margin-top: 70px;
     z-index: 5;
 }
 .section-3 {
     background-color: white;
-    min-height: 100vh;
+    height: fit-content;
     position: relative;
-    top: -100px;
+    top: -70px;
     color: black;
     padding-top: 270px;
 }
 .make {
     font-weight: 400;
+    margin-top: -80px;
+    font-size: 2rem;
+    height: fit-content;
 }
 .section-3 h1 {
     color: black;
@@ -137,27 +151,28 @@ p {
 }
 .fourth-p {
     margin-top: 10px !important;
+    width: 80vw;
 }
 .buynowbtn2 {
-    top: 30px;
+    top: 25px;
     border-color: white;
 }
 .tvbg2 {
-    margin-top: 70px;    
+    margin-top: 60px;
 }
 .section-4 {
     background-color: black;
-    min-height: 100vh;
     height: fit-content;
     position: relative;
     top: -100px;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
 }
 .ready {
     font-weight: 400;
+    font-size: 2rem;
 }
 .ready:nth-child(2) {
     background: linear-gradient(to right, #EC1EB1 40%, #5E01BA);    
@@ -171,17 +186,22 @@ p {
     top: -14px;
     margin-left: 0;
 }
+.steparrow1-wrapper {
+    margin-top: 20px;
+    width: 100vw;
+    text-align: center;
+}
 .steparrow1,
 .steparrow2 {
-    width: 60vw;
+    width: 70vw;
 }
 .steparrow1 {
     position: relative;
-    left: -20px;
+    left: calc(98.5% - 100%);
 }
 .steparrow2 {
     position: relative;
-    left: 20px;
+    right: calc(98.5% - 100%);
 }
 .section-4 section {
     margin-top: 30px;
@@ -194,7 +214,7 @@ p {
     margin-top: -54px;
 }
 .stepwrapper div {
-    margin: 24px;
+    margin: 10px;
 }
 .stepwrapper img {
     margin-top: 5px;
@@ -206,11 +226,11 @@ p {
 .stepnumber {
     position: relative;
     font-weight: 700;
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     color: rgba(225, 225, 225, .3);
 }
 .footer {
-    margin-top: 150px;
+    margin-top: 100px;
     font-size: .75rem;
     text-align: left;
     width: 100%;
@@ -223,9 +243,12 @@ p {
 .footercontainer a {
     margin: 2px 0;
 }
+.footercontainer h5 {
+    margin-top: 20px;
+}
 .copyrights {
     position: relative;
-    top: 50px;
+    top: 20px;
 }
 .copy {
     width: 12px;
@@ -238,6 +261,58 @@ p {
     margin-left: 20px;
     margin-right: 30px;
 }
-.fb img, .ig img, .tw img{
+.social img {
     width: 16px;
+    transition: all .3s;
+}
+.social img:hover { 
+    width: 18px;
+}
+
+@media screen and (min-width: 600px) {
+    .think-text1,
+    .think-text2,
+    .unlock,
+    .make,
+    .ready {
+        font-size: 2.7rem;
+}
+.cyberstick-wrapper {
+    height: 210px;    
+}
+.cyberstick {
+    height: 300px;
+    position: relative;
+    top: -110px;
+}
+.tvbg1 {
+    height: 200px;
+    z-index: 5;
+}
+.tvbg2 {
+    margin-bottom: 30px;
+}
+.section-3 {
+    top: -90px;
+}
+.fourth-p {
+    width: 40vw;
+}   
+.seventh-p {
+    width: 32vw;    
+}
+.stepnumber {
+    font-size: 1.2rem !important;
+}
+.stepwrapper {
+    margin-top: -70px;
+}
+.stepwrapper div {
+    margin: 10px 20px;
+}
+}
+@media screen and (min-width: 700px) {
+    .stepwrapper div {
+        margin: 10px 40px;
+    }    
 }
