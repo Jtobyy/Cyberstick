@@ -1,0 +1,98 @@
+.checkout-section-1 {
+    margin-top: 100px;
+    margin-bottom: 350px;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+.checkout-p {
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+.checkout-p:nth-child(2) {
+    color: rgba(225, 225, 225, .4);
+    font-size: small;
+}
+.aside-1 {
+    border-bottom: 1px solid grey;
+    color: white;
+    width: fit-content;
+}
+.aside-1 h3 {
+    font-weight: 400;
+}
+.cyberstickbent {
+    width: 100px;
+    margin-left: -20px;
+}
+.amount {
+    margin-right: 10px;
+}
+.amount-controls {
+    font-size: .9em;
+}
+.increase {
+    margin-bottom: 5px;
+}
+.amount,
+.amount-controls {
+    margin-top: -12px;
+    position: absolute;
+    right: 23%;
+}
+
+.aside-1 i {
+    font-size: 1em;
+    cursor: pointer;
+    color: rgba(225, 225, 225, .4);
+    transition: all .3s;
+}
+.aside-1 i:hover {
+    color: rgba(225, 225, 225, .8);
+}
+.price-wrapper {
+    position: absolute;    
+    right: 5px;
+    line-height: 1.5em;    
+    margin-left: 30px;
+}
+.price,
+.amount {
+    font-size: 1.1em;
+}
+.remove {
+    background: linear-gradient(to right, #EC1EB1, #EC1EB1, #5E01BA, #5E01BA);    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: .8em;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .3s;
+}
+.remove:hover {
+    /*-webkit-transform: scale(1.1);    */
+    font-size: .9em;
+}    
+
+@media screen and (max-width: 1000px){
+    .checkout-section-1 {
+        padding-right: 0;
+        padding-left: 2vw;
+    }
+}
+
+// bootstrap medium screen breakpoint {
+@media screen and (max-width: 768px){
+    .checkout-section-1 {
+        padding-left: 3vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .checkout-p {
+        font-size: smaller;
+    }
+    .checkout-p:nth-child(2) {
+        font-size: x-small;
+    }
+}

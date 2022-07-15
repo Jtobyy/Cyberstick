@@ -1,0 +1,6 @@
+.custom-control-input:checked~.custom-control-label::before {
+  background: linear-gradient(to right, #EC1EB1, #5E01BA 90%);
+  }
+.custom-control-input~.custom-control-label::before {
+  transform: scale(.8);  
+}
