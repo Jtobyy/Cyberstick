@@ -25,17 +25,13 @@
     width: 100px;
     margin-left: -20px;
 }
-.amount {
-    margin-right: 10px;
-}
 .amount-controls {
-    font-size: .9em;
+    font-size: 1rem;
 }
 .increase {
     margin-bottom: 5px;
 }
-.amount,
-.amount-controls {
+.amount-wrapper {
     margin-top: -12px;
     position: absolute;
     right: 23%;
@@ -58,7 +54,7 @@
 }
 .price,
 .amount {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 .remove {
     background: linear-gradient(to right, #EC1EB1, #EC1EB1, #5E01BA, #5E01BA);    
@@ -81,17 +77,43 @@
     }
 }
 
-// bootstrap medium screen breakpoint {
-@media screen and (max-width: 768px){
+// bootstrap small screen breakpoint {
+@media screen and (max-width: 575px){
+    .cyberstickbent {
+        margin-top: -50px;
+        width: 200px;
+    }
+    .checkout-p-wrapper {
+        margin-top: -30px;
+    }    
+    .checkout-p {
+        margin-left: 0px;
+    }
+    .amount-wrapper {
+        margin-top: 10px;
+        position: unset;
+    }
+    .amount {
+        padding-left: 0 !important;
+    }
+    .price-wrapper {
+        margin-top: 10px;    
+        margin-left: 0px;
+        position: unset;
+    }
     .checkout-section-1 {
         padding-left: 3vw;
+    }
+    .price {
+        background-color: rgb(30, 30, 30);
+        padding: 3px 20px 3px 20px;
+    }
+    .remove {
+        margin-left: 35px;
     }
 }
 
 @media screen and (max-width: 400px){
-    .checkout-p {
-        font-size: smaller;
-    }
     .checkout-p:nth-child(2) {
         font-size: x-small;
     }

@@ -20,13 +20,12 @@ class Shipping extends React.Component {
     submitInfo = (e) => {
         if (!sessionStorage.getItem('new_customer')) {
             $('#spinner').removeClass('hidden');
-            axios.post('https://cyberstick-project.herokuapp.com/cyberstick/customers/', {
+            axios.post('https://cyberstick-backend.herokuapp.com/cyberstick/customers/', {
             //axios.post('http://127.0.0.1:8000/cyberstick/customers/', {
                 first_name: $('#first_name').val(),
                 last_name: $('#last_name').val(),
                 street_address: $('#street_address').val(),
                 country: $('#country').val(),
-                zip_code: $('#zip_code').val(),
                 city_state: $('#city_state').val(),
                 email: $('#email').val(),
                 phone_number: $('#phone_number').val(),
@@ -37,7 +36,7 @@ class Shipping extends React.Component {
                 sessionStorage.setItem('new_customer', res['data']['first_name'] + ' ' + res['data']['last_name'])
                 this.setState({checkout: 'yes'})
             })
-            .catch((err) => {alert(err); $('#spinner').addClass('hidden');})
+            .catch((err) => {alert(err.message); $('#spinner').addClass('hidden');})
         }
     }   
 
@@ -68,16 +67,16 @@ class Shipping extends React.Component {
                 <ScrollToTopOnMount />
                 <div className="container-fluid">
                 <section className='row checkout-section-1
-                justify-content-around align-items-start g-0px'>
+                justify-content-around align-items-start g-0px text-sm-left text-center'>
                     <div className="col-md-6 col-12">
                         <div className="p-5 pb-30px">
                             <h3 className="fw-400">Shipping</h3> 
                             <p className="text-muted py-2 ">Where Should We Send Your Order?</p>
                         </div>    
-                        <form className="form px-5" onSubmit={(e) => {e.preventDefault(); this.submitInfo(e)}}>
+                        <form className="form px-sm-5 px-1" onSubmit={(e) => {e.preventDefault(); this.submitInfo(e)}}>
                             <p>Enter Your Name And Address:</p>    
                             <div className="form-group">    
-                                <input id="first_name" type="text" className="form-control " placeholder="First Name" required/>    
+                                <input id="first_name" type="text" className="form-control" placeholder="First Name" required/>    
                             </div>
                             <div className="form-group">    
                                 <input id="last_name" type="text" className="form-control" placeholder="Last Name" required/>
@@ -86,12 +85,9 @@ class Shipping extends React.Component {
                                 <input type="text" id="street_address" className="form-control" placeholder="Street Address" required/>
                             </div>
                             <div className="form-group">
-                                <input type="text" id="country" className="form-control" placeholder="Country" required/>
+                                <input type="text" id="country" className="form-control" value='Nigeria' placeholder="Country" disabled required/>
                             </div>
                             <div className="row" id="street_extra">
-                                <div className="col">
-                                    <input type="text" id="zip_code" className="form-control" placeholder="Zip Code" required/>
-                                </div>  
                                 <div className="col">
                                     <input type="text" id="city_state" className="form-control" placeholder="City/State" required/>
                                 </div>    
@@ -112,7 +108,7 @@ class Shipping extends React.Component {
                             </button>
                         </form>
                     </div>    
-                    <div className="mt-30px">
+                    <div className="mt-30px col-12 col-md-4">
                         <CheckoutForm header="your order total" price={this.state.total_price}
                             shipping={this.state.shipping} tax={this.state.tax}
                             total_price={this.state.total_price} />

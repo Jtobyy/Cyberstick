@@ -8,6 +8,9 @@ html, body {
     font-family: 'Quatro' !important;
     background-color: black;
 }
+.medium-screens {
+    display: none;
+}
 input,
 input:focus {
     background-color: rgb(50, 50, 50) !important;
@@ -383,8 +386,38 @@ h5 {
     width: 19px;
 }
 
+/* Payment section */
+.whitebg {
+    width: 250px;
+}
+.paystack {
+    left: 0;
+    width: 250px;
+    top: 50px;
+    transform: translate(0, -50%);
+}
+.thank {
+    width: 45vw;
+}
+.border-bottom {
+    border-color: rgb(108,117,125) !important;
+}
+.order-details {
+    letter-spacing: .3px;
+}
+.order-details span {
+    color: rgb(136, 144, 152);
+}
+
+
 
 @media screen and (max-width: 768px) {
+    .large-screens {
+        display: none;
+    }    
+    .medium-screens {
+        display: block;
+    }
     .logo {
         width: fit-content;    
         height: fit-content;
@@ -453,10 +486,14 @@ h5 {
         right: 6vw;   
         top: 0px;
         z-index: 2;
-        width: 40vw;
+        width: 50vw;
         height: fit-content;
         background-color: rgb(22, 22, 22);
     }
+    .thank {
+        width: inherit;
+        text-align: center !important;
+    }    
 }
 
 @media screen and (max-width: 700px) {
@@ -485,29 +522,6 @@ h5 {
     .faq-header {
         font-size: 1.1rem;
     }
-}
-
-/* Payment section */
-.whitebg {
-    width: 250px;
-}
-.paystack {
-    left: 0;
-    width: 250px;
-    top: 50px;
-    transform: translate(0, -50%);
-}
-.thank {
-    width: 35vw;
-}
-.border-bottom {
-    border-color: rgb(108,117,125) !important;
-}
-.order-details {
-    letter-spacing: .3px;
-}
-.order-details span {
-    color: rgb(136, 144, 152);
 }
 
 @media screen and (max-width: 300px) {

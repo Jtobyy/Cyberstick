@@ -1,15 +1,25 @@
+// Import external modules and components
 import React from 'react';
+import { Link } from 'react-router-dom'
+import $ from 'jquery';
+
+// Import custom modules, functions, variables and components
+import { Steps, Faq, ScrollToTopOnMount } from './Bases';
+
+// Import custom styles
 import './static/Home.scss';
+
+// Import external styles
+import 'animate.css';
+
+// Import image files
 import cyberstick from './static/cyberstick front and back 1.png';
 import tvbg1 from './static/tvbg1.png';
 import tvbg2 from './static/tvbg2.png';
 
-import { Link } from 'react-router-dom'
-import { Steps, Faq, ScrollToTopOnMount } from './Bases';
 
-import $ from 'jquery';
-import 'animate.css';
 
+// Set a cookie given its name(cname) and its value(cvalue) and amount of days(exdays)
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -17,6 +27,7 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";";
 }
 
+// Get a cookie value given its name(cname)
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -33,11 +44,13 @@ function getCookie(cname) {
     return "";
 }
 
+// Return true if a cooke exists else false
 function checkCookie(cname) {
     if(getCookie(cname) !== "") return true
     else return false
 }
 
+// (Home component) Display the landing page
 export default class Home extends React.Component {
     constructor() {
         super()
@@ -53,6 +66,7 @@ export default class Home extends React.Component {
         $('#spinner').removeClass('hidden');
     }
 
+    // Hide an element by hiding its parent. Used to hide the cookie policy popup    
     removePopup = (e) => {
         e.target.parentElement.classList.add('hidden')
     }
@@ -60,7 +74,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <div className='landing' id='overview'>
-            <ScrollToTopOnMount />    
+            <ScrollToTopOnMount />
                 <section className='home-section-1 d-flex flex-column'>
                     <div className='container-fluid pl-7vw pr-7vw '>   
                         <div className='row mt-170px mb-100px position-relative home-section-1-row'>

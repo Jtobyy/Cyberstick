@@ -1,15 +1,21 @@
+// Import external modules and components
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Import custom modules, functions, variables and components
 import { Footer, Header, Faq } from './Bases';
 import Home from './Home';
 import Checkout from './Checkout';
-
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import Shipping from './Shipping';
 import { CardPayment, TransferPayment, Payment } from './Payment';
 
+// Import external styles
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
+
+// Control routing of app
 class App extends React.Component {
   render() {
     return (
@@ -26,7 +32,7 @@ class App extends React.Component {
             <Route exact path='/cardpayment' element={<CardPayment />} />
             <Route exact path='/transferpayment' element={<TransferPayment />} />
           </Routes>
-          <div className="border rounded" id="spinner"></div> 
+          <div className="border rounded" id="spinner"></div> {/** shows spinner when api requests are in progress */}
           <Footer />
         </div>
       </Router>
@@ -34,5 +40,6 @@ class App extends React.Component {
   }
 }
 
+// Render app in the element with id 'root' in the index.html page
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);

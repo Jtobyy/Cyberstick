@@ -1,26 +1,29 @@
+// Import external modules and components
 import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import NumberFormat from 'react-number-format';
+import $ from 'jquery';
 
+// Import custom styles
+import './static/Home.scss';
+
+// Import image files
 import copyright from './static/copyright.png';
 import logo from './static/Group_20logo.svg';
 import cart from './static/Cart.svg';
-
 import steparrow1 from './static/steparrow1.png';
 import steparrow2 from './static/steparrow2.png';
-/*import step1 from './static/step1.png';*/
 import step2 from './static/step2.png';
 import step3 from './static/step3.png';
 import frame1 from './static/frame1.png';
 import frame2 from './static/frame2.png';
 import frame3 from './static/frame3.png';
-
-import './static/Home.scss';
-import $ from 'jquery';
+// import step1 from './static/step1.png';
 
 
 
+// Header component (Display the header)
 function Header() {
     return (
         <header className='fixed-top header d-md-flex flex-row align-items-center'>
@@ -60,8 +63,9 @@ function Header() {
         )    
 }
 
+// Sidebar component (Display sidebar for mobile)
 function Sidebar() {
-    const [sidebarState, setSidebarState] = useState('closed');
+    const [sidebarState, setSidebarState] = useState('closed'); // Keeps track of the state of the sidebar (opened or closed)
 
     return (
         <div>
@@ -95,6 +99,7 @@ function Sidebar() {
     )
 }
 
+// Steps component (Display steps (which is usually directly before the FAQs))
 function Steps() {
     return (
         <section className='section-4 d-flex flex-column align-items-center '>
@@ -143,7 +148,9 @@ function Steps() {
     )
 }
 
+// FAQ component (Displays FAQs)
 class Faq extends React.Component {
+    // shows or hides an faq answer
     showText = (e) => {
         let text;
         let arrow;
@@ -188,41 +195,91 @@ class Faq extends React.Component {
                 <div className='faq-item py-3'>
                     <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
                     onClick={(e) => {this.showText(e)}}>
+                        <p className='faq-header'>What is the subscription fee for Cyberstick?</p>
+                        <div className='arrow rotate position-absolute '>
+                            <div className='stroke-1'></div>
+                            <div className='stroke-2'></div>
+                        </div>
+                    </div>    
+                    <div className='faq-answer hide-answer'> Zero subscription fee, Cyberstick 
+                    is a one-time purchase smart device with no subscription fees. </div>
+                </div>
+                <div className='faq-item py-3'>
+                    <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
+                    onClick={(e) => {this.showText(e)}}>
                         <p className='faq-header'>How do I connect the Cyberstick?</p>
                         <div className='arrow rotate position-absolute '>
                             <div className='stroke-1'></div>
                             <div className='stroke-2'></div>
                         </div>
                     </div>    
-                    <div className='faq-answer hide-answer'> Connect the Cyberstick to a power source (using the small port at the side) and then attach it 
-                    to the HDMI port of your TV or Monitor. A blue comes on indicating that the Cyberstick is 
-                    powered up. If your TV or Monitor is hung on a wall, there is an extender cable that comes 
-                    with the package, attach it to the Cyberstick on plug it into your device.</div>
+                    <div className='faq-answer hide-answer'> Plug your Cyberstick to a power source 
+                    (using the port at the side) and then attach it to the HDMI port of your TV or 
+                    Monitor. A blue light comes on indicating that the Cyberstick is powered up. If 
+                    your TV or Monitor is hung on a wall, there is an extender cable that comes with 
+                    the package, attach it to the Cyberstick and plug it into your device.</div>
                 </div>
                 <div className='faq-item py-4'>
                     <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
                     onClick={(e) => {this.showText(e)}}>
-                        <p className='faq-header'>Why do i need a cybersick?</p>
+                        <p className='faq-header'>How do I use the Cyberstick? </p>
                         <div className='arrow rotate position-absolute'>
                             <div className='stroke-1'></div>
                             <div className='stroke-2'></div>
                         </div>
                     </div>    
-                    <div className='faq-answer hide-answer'>With the remote control that comes with the package, navigate to the settings section, 
-                    connect to a WiFi service and you can start streaming contents online.</div>
+                    <div className='faq-answer hide-answer'>With the remote control that comes with 
+                    the package, navigate to the settings section, connect to a Wi-Fi service and you can 
+                    start streaming contents online.</div>
                 </div>
 
                 <div className='faq-item py-4'>
                     <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
                     onClick={(e) => {this.showText(e)}}>
-                        <p className='faq-header'>Can I download other applications that do not come with the Cyberstick?</p>
+                        <p className='faq-header'>Do I need to own a Smart TV for Cyberstick?</p>
                         <div className='arrow rotate position-absolute'>
                             <div className='stroke-1'></div>
                             <div className='stroke-2'></div>
                         </div>
                     </div>    
-                    <div className='faq-answer hide-answer'>Other applications can be downloaded to the Cyberstick, 
-                    either from the Google playstore or from the browser.</div>
+                    <div className='faq-answer hide-answer'>No, Cyberstick can turn any display/non-smart TV to a smart TV. </div>
+                </div>
+
+                <div className='faq-item py-4'>
+                    <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
+                    onClick={(e) => {this.showText(e)}}>
+                        <p className='faq-header'>Can I stream offline contents with Cyberstick?</p>
+                        <div className='arrow rotate position-absolute'>
+                            <div className='stroke-1'></div>
+                            <div className='stroke-2'></div>
+                        </div>
+                    </div>    
+                    <div className='faq-answer hide-answer'>Yes, you can download and watch contents offline.</div>
+                </div>
+
+                <div className='faq-item py-4'>
+                    <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
+                    onClick={(e) => {this.showText(e)}}>
+                        <p className='faq-header'>Can I download other applications that do not come with Cyberstick?</p>
+                        <div className='arrow rotate position-absolute'>
+                            <div className='stroke-1'></div>
+                            <div className='stroke-2'></div>
+                        </div>
+                    </div>    
+                    <div className='faq-answer hide-answer'> Yes, other applications can be downloaded, 
+                    either from the Google Playstore or from the browser.</div>
+                </div>
+
+                <div className='faq-item py-4'>
+                    <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
+                    onClick={(e) => {this.showText(e)}}>
+                        <p className='faq-header'>Do I need to subscribe monthly for Cyberstick? </p>
+                        <div className='arrow rotate position-absolute'>
+                            <div className='stroke-1'></div>
+                            <div className='stroke-2'></div>
+                        </div>
+                    </div>    
+                    <div className='faq-answer hide-answer'>No, there are no subscription fees attached to Cyberstick.</div>
                 </div>
 
                 <div className='faq-item py-4'>
@@ -234,7 +291,8 @@ class Faq extends React.Component {
                             <div className='stroke-2'></div>
                         </div>
                     </div>    
-                    <div className='faq-answer hide-answer'>text</div>
+                    <div className='faq-answer hide-answer'>Cyberstick comes with an in-built memory space of 16GB, 
+                    with an external slot for a memory card or hard drive. </div>
                 </div>
 
                 <div className='faq-item py-4'>
@@ -246,64 +304,51 @@ class Faq extends React.Component {
                             <div className='stroke-2'></div>
                         </div>
                     </div>    
-                    <div className='faq-answer hide-answer'>text</div>
-                </div>
+                    <div className='faq-answer hide-answer'>Yes, Cyberstick has a Bluetooth setup with which 
+                    you can connect your Bluetooth speaker and any other device.</div>
+                </div>                
 
                 <div className='faq-item py-4'>
                     <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
                     onClick={(e) => {this.showText(e)}}>
-                        <p className='faq-header'>What else can the Cyberstick be used for?</p>
+                        <p className='faq-header'>What productivity feature can I explore with Cyberstick?</p>
                         <div className='arrow rotate position-absolute'>
                             <div className='stroke-1'></div>
                             <div className='stroke-2'></div>
                         </div>
                     </div>    
-                    <div className='faq-answer hide-answer'>text</div>
-                </div>
-
-                <div className='faq-item py-4'>
-                    <div className='faq-header-wrapper d-flex position-relative pointer-cursor' 
-                    onClick={(e) => {this.showText(e)}}>
-                        <p className='faq-header'>How do I connect the Cyberstick?</p>
-                        <div className='arrow rotate position-absolute'>
-                            <div className='stroke-1'></div>
-                            <div className='stroke-2'></div>
-                        </div>
-                    </div>    
-                    <div className='faq-answer hide-answer'>text</div>
-                </div>
+                    <div className='faq-answer hide-answer'>With Cyberstick, you can have access to your 
+                    Google Workspace tools anytime, anywhere.</div>
+                </div>                                
             </section>
         )
     }
 }
+
+// Footer component (Display contact and copyright informations)
 function Footer() {
     return (
         <footer className='footer container'>
             <div className='footercontainer row align-items-start 
             justify-content-between'>
-                <div className='col-md-3 d-flex flex-column '>
+                <div className='col-md-4 d-flex flex-column '>
                     <img src={logo} style={{width: '80%'}} className='footer-logo' alt='logo'/>
                 </div>
-                <div className='col-md-3 col-6 d-flex flex-column'>
-                    <h5 className='p-0 mt-0'>support</h5>
-                    <a href='#!' className='py-1 m-0'>Contact Us</a>
-                    <a href='#!' className='py-1 m-0'>Product Support</a>
-                    <a href='#!' className='py-1 m-0'>Order Support</a>
-                </div>
-                <div className='col-md-3 col-6 d-flex flex-column'>
-                    <h5 className='p-0 mt-0'>contact us</h5> 
+                <div className='col-md-4 col-6 d-flex flex-column'>
+                    <h5 className='p-0 mt-md-0'>contact us</h5>
                     <a href='#!' className='py-1 m-0'>(+234) 908 899 9099</a>
                     <a href='#!' className='py-1 m-0'>support@cyberstick.io</a>
+                    <a href='#!' className='py-1 m-0'>order@cyberstick.io</a>
                 </div>
-                <div className='col-md-3 col-6 d-flex flex-column'>
-                    <h5 className='p-0 mt-md-0 mt-5'>socials</h5> 
-                    <a className='fb py-1 m-0' href='https://www.facebook.com/Cyberstickio-100203956085984/'>
+                <div className='col-md-4 col-6 d-flex flex-column'>
+                    <h5 className='p-0 mt-md-0'>socials</h5> 
+                    <a className='ig py-1 m-0' href='https://www.instagram.com/cyberstick.io/'>
                         Instagram
                     </a>
                     <a className='tw py-1 m-0' href='https://www.twitter.com/Cyberstick_io'>
                         Twitter
                     </a>
-                    <a className='ig py-1 m-0' href='https://www.instagram.com/cyberstick.io/'>
+                    <a className='fb py-1 m-0' href='https://www.facebook.com/Cyberstickio-100203956085984/'>
                         Facebook
                     </a>
                     <a className='yt py-1 m-0' href='https://youtube.com/channel/UCAvjUB_HpH77JcBvEKfhZFA'>
@@ -319,6 +364,7 @@ function Footer() {
     )
 }
 
+// Display Checkout form details that is usually shown on almost every page except from the homepage
 function CheckoutForm(props) {
     return(
         <form onSubmit={(e) => {e.preventDefault();}}>
@@ -361,6 +407,7 @@ function CheckoutForm(props) {
     )    
 }
 
+// Scroll pages to the top
 class ScrollToTopOnMount extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -371,4 +418,5 @@ class ScrollToTopOnMount extends Component {
     }    
 }
 
+// Export variables, functions or components
 export { Footer, Header, Steps, Faq, CheckoutForm, ScrollToTopOnMount }

@@ -213,3 +213,33 @@ class CardPayment extends React.Component {
             </div>
         )}
 }
+
+
+
+
+<div className="custom-control custom-radio mt-4">
+    <input className="custom-control-input" type='radio' id='direct_transfer' name='paymentoption' value='direct transfer' />
+    <label className="custom-control-label fs-1p2em text-white" htmlFor='direct_transfer'>Direct bank transfer</label>
+</div>
+<p className="text-muted mt-1">Make your payment directly into our bank account. Please use your Order ID as the payment reference. 
+    Your order won’t be shipped until the funds have cleared in our account.</p>
+
+
+
+
+/*axios.get(`https://api.paystack.co/transaction/verify/${reference}`, {
+            headers: {
+                Authorization: "Bearer sk_live_a3d68c096c46bf96e87f6ffecb4dcc3f96f956dd",
+                'Content-Type': "application/json",
+                }
+            })*/
+            /*.then((res) => {
+                if (res.data.data.status === 'success') {
+                    this.setState({order_id: res.data.data.reference, 
+                        date: String(res.data.data.createdAt).substring(0, 10), 
+                        total_price: res.data.data.amount / 100, email: res.data.data.customer.email
+                    })*/
+                    //axios.put(`https://cyberstick-project.herokuapp.com/cyberstick/orders/${reference}`, {    
+                    /*axios.put(`http://127.0.0.1:8000/cyberstick/orders/${reference}`, {
+                        status: 2,
+                    })*/
