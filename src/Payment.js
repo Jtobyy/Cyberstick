@@ -111,8 +111,6 @@ class CardPayment extends React.Component {
                 // Send an email to the customer
                 emailjs.send("gmail", "template_tz24zvl", {
                     to_name: sessionStorage.getItem('customer'),
-                    order_id: res.data.order_id,
-                    delivery_date: res.data.delivery_date,
                     reply_to: res.data.email
                 }, 'C6M0b-kqeLWPsKmw-')
                 .then((res) => console.log('email sent successfully'), (err) => console.log('fialed...', err))
