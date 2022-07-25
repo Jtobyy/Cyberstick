@@ -26,7 +26,7 @@ class Shipping extends React.Component {
                 last_name: $('#last_name').val(),
                 street_address: $('#street_address').val(),
                 country: $('#country').val(),
-                city_state: $('#city_state').val(),
+                city_state: $('#city_state').val(), 
                 email: $('#email').val(),
                 phone_number: $('#phone_number').val(),
                 order_id: sessionStorage.getItem('order_token'),

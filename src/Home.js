@@ -84,8 +84,8 @@ export default class Home extends React.Component {
                                     Think Beyond Smart,</h1>
                                 <h1 className='think-text2'>
                                     Think Cyberstick.</h1>
-                                <p className='home-p my-0 text-md-left'>A multi purpose device that offers users to stream contents with access to
-                                                        applications that allows users to work on the go..</p>
+                                <p className='home-p my-0 text-md-left'>A multi purpose smart device that converts any non smart tv or monitor
+                                                        to a smart tv at zero subscription.</p>
                                 <Link to= "/Checkout">    
                                     <button className='buynowbtn'>
                                         Buy Now
@@ -106,7 +106,7 @@ export default class Home extends React.Component {
                     <h1 className='unlock'>
                         World Of Content
                     </h1>
-                    <p className='home-p'>Stay plugged with cyber stick, a smarter life to your TV</p>
+                    <p className='home-p'>Stay plugged with Cyberstick, a smarter life to your TV</p>
                     <Link to= "/Checkout" style={{width: '100%'}}>
                         <button className='buynowbtn'>
                             Buy Now
@@ -118,9 +118,8 @@ export default class Home extends React.Component {
                     <h1 className='make'>
                         Make Your TV Smarter    
                     </h1>
-                    <p className='home-p fourth-p'>With any display system, Cyberstick™ offers you a new multimedia
-                    <span> experience anytime, anywhere. Compact and portable, it brings a smarter</span>
-                    <span> life to your displays. </span></p>
+                    <p className='home-p fourth-p'>With Cyberstick, you get access to Google Workspace
+                    <span> tools and applications anywhere, anytime.</span></p>
                     <Link to= "/Checkout" style={{width: '100%'}}>
                         <button className='buynowbtn buynowbtn2'>
                             Buy Now

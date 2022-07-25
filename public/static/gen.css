@@ -831,6 +831,17 @@ h5 {
   color: rgb(136, 144, 152);
 }
 
+.exp {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.exp span {
+  background: linear-gradient(to right, #EC1EB1 40%, #5E01BA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
 @media screen and (max-width: 768px) {
   .large-screens {
     display: none;
@@ -924,6 +935,9 @@ h5 {
 @media screen and (max-width: 600px) {
   .logo img {
     width: 30vw;
+  }
+  .exp {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 500px) {

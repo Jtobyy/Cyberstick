@@ -103,15 +103,9 @@ function Sidebar() {
 function Steps() {
     return (
         <section className='section-4 d-flex flex-column align-items-center '>
-            <h1 className='ready align-self-md-start'>
-                Ready To Use In
+            <h1 className='exp align-self-md-start'>
+                Experience C<span>y</span>berstick <span>in 3 steps</span>
             </h1>
-            <h1 className='ready align-self-md-start'>
-                Just 3 Steps
-            </h1>
-            <p className='text-md-left step-p home-p align-self-start'>With the any display system, Cyberstick™ offers you a new
-            <span className='align-self-start my-0'> multimedia experience anytime, anywhere. Compact and</span>
-            <span className='align-self-start my-0'> portable, it brings a smarter life to your displays. </span></p>
             <div className='steparrow1-wrapper'>
                     <img src={steparrow1} className="steparrow1" alt=""/>
                 </div>

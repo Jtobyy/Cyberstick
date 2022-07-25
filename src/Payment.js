@@ -83,7 +83,8 @@ class CardPayment extends React.Component {
             sessionStorage.setItem('payment_url', res.data.authorization_url)
             window.location.href = res.data.authorization_url // redirect to paystack using the url gotten from the backend
         })
-        .catch((e) => {console.log(e.message); 
+        .catch((e) => {
+            console.log(e.message);
             $('#spinner').addClass('hidden');
             this.setState({overlay: 'failed'})})
     }

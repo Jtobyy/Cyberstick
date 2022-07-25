@@ -28,12 +28,12 @@ export default class Checkout extends React.Component {
         this.state = {
             product_id: 1,    
             amount: 1,
-            initial_price: 25000,         // Initial price of one (always constant)
-            price: 25000,                 // Price of one multiplied by the amount
+            initial_price: 29999,         // Initial price of one (always constant)
+            price: 29999,                 // Price of one multiplied by the amount
             shipping: 'Free',
             tax: '-',
             color: 'Black',
-            total_price: 25000,           // state.price + shipping + tax
+            total_price: 29999,           // state.price + shipping + tax
             delivery_date: delivery_date.toDateString(),
             askinfo: false,               // If true, customer's information is requested for
         };
