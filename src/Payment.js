@@ -4,7 +4,6 @@ import axios from "axios";
 import { Link, useParams, useLocation, Navigate } from "react-router-dom";
 import { ScrollToTopOnMount, CheckoutForm } from "./Bases";
 import NumberFormat from "react-number-format";
-import emailjs from '@emailjs/browser';
 import $ from 'jquery';
 
 // Import image files
@@ -108,12 +107,6 @@ class CardPayment extends React.Component {
                     total_price: res.data.total_price,
                     email: res.data.email
                 })
-                // Send an email to the customer
-                emailjs.send("gmail", "template_tz24zvl", {
-                    to_name: sessionStorage.getItem('customer'),
-                    reply_to: res.data.email
-                }, 'C6M0b-kqeLWPsKmw-')
-                .then((res) => console.log('email sent successfully'), (err) => console.log('fialed...', err))
             })
             .catch((err) => {
                 $('#spinner').addClass('hidden');
@@ -124,7 +117,7 @@ class CardPayment extends React.Component {
         /** This page is only for automated payments so if trx and reference doesn't exist, Payment is initiated  */       
         else {
             this.submitForm()
-        } 
+        }
     }
 
 

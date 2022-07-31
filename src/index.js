@@ -9,11 +9,14 @@ import Home from './Home';
 import Checkout from './Checkout';
 import Shipping from './Shipping';
 import { CardPayment, TransferPayment, Payment } from './Payment';
+import { loadProgressBar } from 'axios-progress-bar';
 
 // Import external styles
+import 'axios-progress-bar/dist/nprogress.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
+loadProgressBar()
 
 // Control routing of app
 class App extends React.Component {

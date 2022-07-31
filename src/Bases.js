@@ -330,22 +330,22 @@ function Footer() {
                 </div>
                 <div className='col-md-4 col-6 d-flex flex-column'>
                     <h5 className='p-0 mt-md-0'>contact us</h5>
-                    <a href='#!' className='py-1 m-0'>(+234) 908 899 9099</a>
-                    <a href='#!' className='py-1 m-0'>support@cyberstick.io</a>
-                    <a href='#!' className='py-1 m-0'>order@cyberstick.io</a>
+                    <a href='tel:+2349088999099' className='py-1 m-0'>(+234) 908 899 9099</a>
+                    <a href='mailto:support@cyberstick.io' target='_blank' rel='noreferrer' className='py-1 m-0'>support@cyberstick.io</a>
+                    <a href='mailto:sales@cyberstick.io' target='_blank' rel='noreferrer' className='py-1 m-0'>sales@cyberstick.io</a>
                 </div>
                 <div className='col-md-4 col-6 d-flex flex-column'>
                     <h5 className='p-0 mt-md-0'>socials</h5> 
-                    <a className='ig py-1 m-0' href='https://www.instagram.com/cyberstick.io/'>
+                    <a rel='noreferrer' target='_blank' className='ig py-1 m-0' href='https://www.instagram.com/cyberstick.io/'>
                         Instagram
                     </a>
-                    <a className='tw py-1 m-0' href='https://www.twitter.com/Cyberstick_io'>
+                    <a rel='noreferrer' target='_blank' className='tw py-1 m-0' href='https://www.twitter.com/Cyberstick_io'>
                         Twitter
                     </a>
-                    <a className='fb py-1 m-0' href='https://www.facebook.com/Cyberstickio-100203956085984/'>
+                    <a rel='noreferrer' target='_blank' className='fb py-1 m-0' href='https://www.facebook.com/Cyberstickio-100203956085984/'>
                         Facebook
                     </a>
-                    <a className='yt py-1 m-0' href='https://youtube.com/channel/UCAvjUB_HpH77JcBvEKfhZFA'>
+                    <a rel='noreferrer' target='_blank' className='yt py-1 m-0' href='https://youtube.com/channel/UCAvjUB_HpH77JcBvEKfhZFA'>
                         Youtube
                     </a>
                     
